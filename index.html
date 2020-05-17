@@ -1,0 +1,187 @@
+<html>
+<head>
+<title>MBATherapy</title>
+<link rel="icon" href="Media/main_logo.jpg">
+<link href="generic_style.css" type="text/css" rel="stylesheet">
+<script src="main_script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lacquer&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Odibee+Sans&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+
+    <!-- <video autoplay muted loop id="myVideo">
+  
+       <source src="Media/Cover_River_Darkened_Again.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+   -->     
+    <!--
+    <div class="book_button" id="book_button">
+        <img src="Media/book_button.png" id="book_button_image">
+    </div>
+-->
+    
+
+    
+   <div class="socials" id="socials">
+    
+       <a id="socialmedia" href="https://www.facebook.com/universityofvictoria/" target="_blank" class="fa fa-facebook"></a>
+       <a id="socialmedia" href="https://twitter.com/uvic" target="_blank" class="fa fa-twitter"></a>
+       <a id="socialmedia" href="https://www.instagram.com/universityofvictoria/" target="_blank" class="fa fa-instagram"></a>
+       <a id="socialmedia" href="https://www.linkedin.com/school/university-of-victoria/" target="_blank" class="fa fa-linkedin"></a>
+
+    </div>
+    
+    <div class="header" id="header">
+        <h1>Dr. Kevin Miller </h1>
+    
+    </div>
+
+    <div class="navButton" id="navButtonBars" onclick="animation(this); togglemyNav()">
+        <div class="topbar"></div>
+        <div class="midbar"></div>
+        <div class="botbar"></div>
+    </div>
+    
+    <div id="myNav" class="overlay">
+  <div class="overlay-content">
+    <a id="currentPage" href="index.html">Welcome</a>
+    <a href="services.html">Services</a>
+    <a href="agreement.html">Agreement</a>
+    <a href="contact.html">Contact</a>
+    <a href="fees.html">Fees</a>
+    <a href="book_an_appointment.html">Book an Appointment</a>
+      <div class="overlaySocials" id="overlaySocials">
+        <a id="socialmedia" href="https://www.facebook.com/universityofvictoria/" target="_blank" class="fa fa-facebook"></a>
+       <a id="socialmedia" href="https://twitter.com/uvic" target="_blank" class="fa fa-twitter"></a>
+       <a id="socialmedia" href="https://www.instagram.com/universityofvictoria/" target="_blank" class="fa fa-instagram"></a>
+       <a id="socialmedia" href="https://www.linkedin.com/school/university-of-victoria/" target="_blank" class="fa fa-linkedin"></a>
+      </div>
+  </div>
+</div>
+    
+<div class="main">
+    <div class="aboutHeader">
+
+    </div>
+
+    <div class="likes">
+    
+         <img src="Media/DrKevin%20-%20pic%20(1).JPG" id="kevin_introduction">
+        
+        <p id="intro">
+  I am Dr. Kevin Miller. My aim is to help people live a life more fully with a sense of peace and
+joy. I work with youth, adults, couples and groups dealing with a wide range of emotional,
+behavioural, cognitive and social issues. My special interest is working with trauma and its
+effects including emotional dysregulation, addiction, relationship conflict, family dysfunction
+and chronic pain using Mind-Body Attunement Therapy ® (MBA Therapy).
+        </p>   
+        
+        
+            <div class="fullContent" id="fourthDiv">
+   
+                
+        </div>
+
+        <p>
+I am the founder of Mind-Body Attunement Therapy ® which integrates the traditional
+interpersonal therapies of pioneers such as Bowlby with current neurobiological approaches
+influenced by  Schore  and Levine and ancient practices of mindfulness. MBA Therapy
+effectively addresses the unconsciously held dysfunctions from trauma histories to facilitate
+neurological and functional healing. I have taught this integrative method to numerous
+professionals and university students and continue to consult with and supervise therapists
+and students.
+            
+        </p>
+        
+        </div>
+    
+<br><br>
+    
+    <div class="likes">
+        
+        <p>
+I obtained my doctorate in Counselling Psychology from the University of Surrey, UK. My
+doctoral research focused on investigating the role of psychological mindedness in addiction
+treatment, and outcome monitoring for addiction intervention. After working for several years
+as a Chartered Psychologist in the UK National Health Service I moved to Canada where I
+have worked as a Registered Psychologist in both Adult Mental Health, and Youth Addiction
+settings.
+            
+        </p>
+       
+        
+        <div class="fullContent" id="fourthDiv">
+   
+                
+        </div>
+        
+         <p>
+
+I am a Registered Psychologist with the College of Psychologists of BC, a Chartered
+Psychologist with the British Psychological Society, registered with the Health and Care
+Professions Council (UK), a member of the BC Psychological Association, and a qualified
+Somatic Experiencing Practitioner (SEP) with the SE Trauma Institute Colorado.
+
+        </p>
+        <!-- Calendly inline widget begin -->
+
+        
+        
+        
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
+
+<!-- Calendly inline widget end -->
+       
+     
+
+      
+    
+    </div>
+    
+    <br>
+    
+  
+
+    
+    
+    </div>
+    
+   
+    
+
+
+
+    
+    
+    
+
+    <script>
+let prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+let currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("header").style.top = "0";
+      document.getElementById("socials").style.top = "0";
+      document.getElementById("navButtonBars").style.top = "0";
+
+
+  } else {
+    document.getElementById("header").style.top = "-200px";
+      document.getElementById("socials").style.top = "-200px";
+      document.getElementById("navButtonBars").style.top = "-200px";
+
+  }
+  prevScrollpos = currentScrollPos;
+}
+</script>
+    
+
+
+    
+    
+</body>
+</html>

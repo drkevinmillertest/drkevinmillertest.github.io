@@ -46,6 +46,8 @@
         <div class="botbar"></div>
     </div>
     
+    <div class="page_indicator" id="page_indicator"><em>Contact</em></div>
+    
     <div id="myNav" class="overlay">
   <div class="overlay-content">
     <a href="index.html">Welcome</a>
@@ -234,27 +236,35 @@ I maintain strict confidentiality with all clients (unless there is the potentia
     
     
     
-
     <script>
 let prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
 let currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
-    document.getElementById("header").style.top = "0";
-      document.getElementById("socials").style.top = "0";
-      document.getElementById("navButtonBars").style.top = "0";
+    document.getElementById("header").style.opacity = "1";
+      document.getElementById("header").style.height = "12%";
+      document.getElementById("header").style.fontSize = "22px";
+      document.getElementById("socials").style.opacity = "1";
+      document.getElementById("navButtonBars").style.opacity = "1";
+      document.getElementById("socials").style.height = "12%";
+      document.getElementById("navButtonBars").style.marginTop = "1.2%";
+      document.getElementById("page_indicator").style.marginTop = "1.35%";
 
 
   } else {
-    document.getElementById("header").style.top = "-200px";
-      document.getElementById("socials").style.top = "-200px";
-      document.getElementById("navButtonBars").style.top = "-200px";
+    document.getElementById("header").style.opacity = "0.98";
+      document.getElementById("header").style.height = "8%";
+      document.getElementById("socials").style.opacity = "0.99";
+      document.getElementById("navButtonBars").style.opacity = "0.99";
+      document.getElementById("socials").style.height = "8%";
+      document.getElementById("header").style.fontSize = "16px";
+      document.getElementById("navButtonBars").style.marginTop = "0.05%";
+      document.getElementById("page_indicator").style.marginTop = "4px";
 
   }
   prevScrollpos = currentScrollPos;
 }
 </script>
-    
 
 
     

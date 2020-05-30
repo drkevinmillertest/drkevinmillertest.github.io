@@ -35,7 +35,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    right: 2%;
+    right: 1.5%;
     transition: 1.3s;
     text-align: center;
     z-index: 11;
@@ -45,14 +45,14 @@ body {
 .navButton {
     position: fixed;
     top: 42px;
-    color: black;
+    color: #525c63;
     width: 35px;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     align-self: center;
     cursor: pointer;
-    left: 0.5%;
+    left: 1.5%;
     z-index: 5;
     transition: 0.9s;
 }
@@ -61,26 +61,26 @@ body {
 
 .page_indicator {
     position: fixed;
-    top: 20px;
+    top: 48px;
     color: darkslategray;
-    margin-top: 1.65%;
     width: 300px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     display: inline-block;
 
-    margin-left: 60px;
+    margin-left: 85px;
     font-size: 20px;
     transition: 0.9s;
     font-family: 'Raleway';
+    
 }
 
 
 .topbar, .midbar, .botbar {
     width: 35px;
     height: 5px;
-    background-color: darkslategray;
+    background-color: #525c63;
     margin: 3px 2px;
     transition: 0.4s;
 
@@ -121,7 +121,7 @@ width: 50%;
     background: rgba(0, 0, 0, 0.7);
     height: 120px;
     width: 100%;
-    color: darkslategray;
+    color: #525c63;
     padding: 20px;
     text-align: center;
     transition: 1.3s;
@@ -141,9 +141,12 @@ width: 50%;
     margin: 0;
     padding: 0;
     height: 35px;
-    
+    color: #525c63;
 }
 
+#name:hover {
+    color: #8c0000;
+}
 
 
 .header a {
@@ -157,7 +160,7 @@ width: 50%;
     display: flex;
     text-align: center;
     text-decoration: none;
-    margin: 8px;
+    margin: 2px;
     padding: 10px;
     
     border-radius: 20%;
@@ -165,20 +168,15 @@ width: 50%;
 
 .calendly-inline-widget {
     display: inline-block;
-    width: 95%;
-    height: 900px;
     left: 0;
     text-align: center;
     margin: 0;
     padding: 0;
-    
+    width: 100%;
+    margin-top: 5%;
 }
 
 .center_calendar {
-    text-align: center;
-    left: 0;
-    margin: 0;
-    padding: 0;
 }
 
 #book_appointment {
@@ -186,27 +184,12 @@ width: 50%;
 }
 
 .fa:hover {
-    color: maroon;
+    color: #8c0000;
 }
 
-.fa-facebook {
+.fa-facebook, .fa-twitter, .fa-instagram, .fa-linkedin {
     /*background: #3B5998;*/
-    color: darkslategray;
-}
-
-.fa-twitter {
-    /*background: #55ACEE;*/
-    color: darkslategray;
-}
-
-.fa-instagram {
-    /* background: #125688;*/
-    color: darkslategray;
-}
-
-.fa-linkedin {
-    /*background: #007bb5;*/
-    color: darkslategray;
+    color: #525c63
 }
 
 .overlay {
@@ -503,7 +486,7 @@ iframe {
 }
 
 .likes p {
-    font-size: 30px;
+    font-size: 25px;
     color: darkslategray;
 }
 
@@ -513,8 +496,13 @@ iframe {
 }
 
 #intro {
-    width: 85%;
+    width: 87%;
     font-size: 25px;
+}
+
+.bolded {
+    font-weight: bold;
+    line-height: 70px;
 }
 
 .dislikes {
@@ -551,14 +539,11 @@ iframe {
 
 .paragraph_content {
     font-family: 'Raleway';
-    font-size: 12px;
+    font-size: 6px;
     margin-left: 5%;
     margin-right: 5%;
     margin-top: 2%;
-    margin-bottom: 2%;
-    display: flex;
-    align-content: center;
-    align-items: center;
+    margin-bottom: 3%;
     line-height: 1.5;
 }
 
@@ -576,10 +561,6 @@ iframe {
 
 }
 
-.paragraph_content img {
-    margin-bottom: 0;
-    margin: 0;
-}
 
 #book_button_image {
     position: fixed;
@@ -600,7 +581,6 @@ iframe {
     border-top: 3px solid white;
     min-height: 400px;
     position: relative;
-    opacity: 0.65;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -613,8 +593,8 @@ iframe {
     border-bottom: 2px solid white;
     min-height: 600px;
     position: relative;
-    opacity: 0.65;
     background-size: cover;
+    background-repeat: no-repeat;
     transition: 0s linear;
     background-position: 220% 30%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -630,7 +610,14 @@ iframe {
 
 #sunocean {
     background-image: url(Media/sunocean.jpeg);
-    background-position: top;
+}
+
+#trees_river {
+    background-image: url(Media/trees_river.jpg);
+}
+
+#backlit_beach {
+    background-image: url(Media/backlit_beach.jpg);
 }
 
 #tree {
@@ -650,6 +637,14 @@ iframe {
     background-position: top;
 }
 
+#swamp {
+    background-image: url(Media/swamp.jpg);
+}
+
+#bird_trees {
+    background-image: url(Media/bird_trees.jpg);
+}
+
 #bridge {
     background-image: url(Media/bridge.jpg);
     background-position: top;
@@ -664,21 +659,27 @@ iframe {
     background-image: url(Media/grasssand.jpg);
 }
 
+#footer {
+    background-image: url(Media/footer.jpg);
+    background-position: bottom;
+}
+
 .list {
     margin-left: 20%;
     margin-right: 20%;
-    border: 2px solid white;
+    border: 2px solid #414345;
 
 }
 
 .list ul {
-
+    
 }
 
 
 
 .list li {
     font-size: 20px;
+    color: #414345;
 }
 
 .sub_list {
@@ -732,11 +733,12 @@ iframe {
     height: 150px;
     padding: 15px;
     background-color: white;
-    margin-right: 80px;
+    margin-right: 40px;
+    margin-left: 40px;
 }
 
 #form {
-    color: white;
+    color: black;
 }
 
 .services_list {
@@ -756,6 +758,10 @@ iframe {
     display: none;
 }
 
+#black:hover {
+    cursor: pointer;
+}
+
 #button {
     padding: 10px 15px;
     font-size: 20px;
@@ -766,16 +772,18 @@ iframe {
     color: #fff;
     background-color: darkslategray;
     border: none;
-    border-radius: 15px;
-    box-shadow: 0 9px #999;
+    border-radius: 6px;
+    box-shadow: 0 6px 2px rgba(148,148,148,0.7);
     position: fixed;
-    right: 16%;
-    top: 35px;
+    right: 15%;
+    top: 36px;
     transition: 0.9s;
+    font-family: 'Raleway';
+    background-color: #414345;
 }
 
 #button:hover {
-    background-color: maroon;
+    background-color: #a80c0c;
 }
 
 #button:active {
@@ -784,7 +792,222 @@ iframe {
     transform: translateY(4px);
 }
 
-@media screen and (max-width: 1000px){
+@media (orientation: portrait){
+    
+    
+    
+    .socials {
+        display: none;
+    }
+    
+    #button {
+        padding: 15px 22px;
+        font-size: 20px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        color: #fff;
+        background-color: darkslategray;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 9px #999;
+        position: fixed;
+        right: 4%;
+        top: 60px;
+        transition: 0.9s;
+        max-width: 170px;
+    }
+    
+    .header {
+        height: 200px;
+    }
+    
+    .main {
+        top: 0;
+    }
+    
+    #r_p {
+        margin-top: 50px;
+        transition:visibility 1s, opacity 1s;
+        font-size: 37px;
+    }
+
+    #name {
+        margin: 0;
+        margin-top: 20px;
+        padding: 0;
+        height: 35px;
+        font-size: 60px;
+    }
+    
+    .topbar, .midbar, .botbar {
+        width: 75px;
+        height: 11px;
+        background-color: darkslategray;
+        margin: 5px 3px;
+        transition: 0.4s;
+
+    }
+    
+    .navButton {
+        position: fixed;
+        top: 65px;
+        color: black;
+        width: 75px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-self: center;
+        cursor: pointer;
+        left: 4%;
+        z-index: 5;
+        transition: 0.9s;
+    }
+    
+    .page_indicator {
+        display: none;
+    }
+    
+    
+    #intro {
+        width: 100%;
+        font-size: 40px;
+      
+        
+    }
+    
+    #kevin_introduction {
+        
+        
+    width: 32%;
+    margin: 0;
+        top: 36%;
+
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 8px 8px 8px 8px rgba(0, 0, 0, 0.4);
+
+    }
+    
+    .likes p {
+        font-size: 40px;
+        color: darkslategray;
+    }
+    
+    .fourthDiv {
+        border-bottom: 3px solid white;
+        border-top: 3px solid white;
+        min-height: 800px;
+        position: relative;
+        background-attachment: fixed;
+        background-position: left;
+        background-repeat: no-repeat;
+        background-size: cover;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    
+    .top_picture {
+        border-bottom: 3px solid white;
+        border-top: 3px solid white;
+        min-height: 60%;
+        position: relative;
+        background-attachment: fixed;
+        background-position: -1200px -550px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .footer_pictures img {
+        
+        height: 200px;
+        padding: 15px;
+        background-color: white;
+        margin-right: 40px;
+        margin-left: 40px;
+    }
+    
+    .footer {
+        border-top: 5px solid darkslategray;
+    }
+    
+    .overlay a {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        text-decoration: none;
+        font-size: 52px;
+        color: #818181;
+        display: block;
+        transition: 0.2s;
+        white-space: nowrap;
+    }
+    
+
+    .change .topbar {
+        -webkit-transform: rotate(-45deg) translate(-16px, 8px);
+        transform: rotate(-45deg) translate(-16px, 8px);
+        transition: 0.6s;
+
+    }
+
+    .change .midbar {
+        opacity: 0;
+        transition: 0.6s;
+    }
+
+    .change .botbar {
+        -webkit-transform: rotate(45deg) translate(-19px, -12px);
+        transform: rotate(45deg) translate(-19px, -12px);
+        transition: 0.6s;
+    }
+    
+    .overlay-content {
+        position: relative;
+        top: 15%;
+        width: 80%;
+        text-align: center;
+        margin-top: 30px;
+        font-family: 'Raleway', cursive;
+        text-align: left;
+        font-size: 18px;
+        margin-left: 3%;
+        transition: 0.5s;
+
+    }
+    
+    /*
+    .paragraph_content {
+    font-family: 'Raleway';
+    font-size: 12px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    line-height: 1.5;
+}
+
+#kevin_introduction {
+    position: absolute;
+    left: 4%;
+    width: 30%;
+    margin: 0;
+    border: none;
+    border-radius: 50%;
+    border: 2px solid darkslategray;
+    -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+    box-shadow: 0 2px 3px 0 rgba(176, 14, 14, 0.9), 0 2px 3px 0 rgba(176, 14, 14, 0.9);
+
+}
+    
+    
+    
+     Old */
+    /*
     .fa {
         width: 40px;
         font-size: 7px;
@@ -969,7 +1192,7 @@ iframe {
     
 
    #rightColTop {
-        /*background-color: RGBA(237, 45, 119, 0.8);*/
+        background-color: RGBA(237, 45, 119, 0.8);
         background-color: rgba(25, 109, 149, 0.8);
         width: 70%;
         font-size: 24px;
@@ -977,7 +1200,7 @@ iframe {
     }
     
     #leftColHeader {
-        /*background-color: RGBA(237, 45, 119, 0.3);*/
+        background-color: RGBA(237, 45, 119, 0.3);
         background-color: RGBA(127, 91, 115, 0.8);
         color: #67BAA7;
         width 30%;
@@ -1001,8 +1224,8 @@ iframe {
     }
     
    #rightColBotHead {
-        /*background-color: rgba(240,211,255,0.8);*/
-        /*background-color: rgba(88, 117, 160,0.8);*/
+        background-color: rgba(240,211,255,0.8);
+        background-color: rgba(88, 117, 160,0.8);
 
         background-color: rgba(88, 117, 160, 0.8);
         width: 70%;
@@ -1012,7 +1235,7 @@ iframe {
     }
 
     #leftColBotHead {
-        /*background-color: RGBA(193, 136, 173, 0.8);*/
+        background-color: RGBA(193, 136, 173, 0.8);
         background-color: rgba(116, 102, 141, 0.8);
         width 30%;
         font-size: 20px;
@@ -1057,5 +1280,9 @@ iframe {
         height: auto;
         border: 14px solid white;
     }
+    
+    */
+
 }
+
 

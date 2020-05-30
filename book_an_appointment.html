@@ -8,6 +8,9 @@
     <link href="https://fonts.googleapis.com/css?family=Lacquer&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Odibee+Sans&display=swap" rel="stylesheet">
      <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
     
@@ -25,105 +28,166 @@
 -->
     
 
+     
     
-   <div class="socials" id="socials">
+ <div id="black" onclick="decreaseNav()"></div>
+    
+   
+
+    
+
+   
+    
+    
+    
+   
+    
+    
+    
+
+    
+
+    <div class="likes">
+    
+         
+      <div class="calendly-inline-widget" data-url="https://calendly.com/mbatherapy/psychotherapy"></div>
+        <!-- Calendly inline widget begin -->
+</div>
+    
+        
+        
+        
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
+
+<!-- Calendly inline widget end -->
+       
+     
+
+        <div class="footer">
+        
+            <div class="footer_pictures">
+                <a href="https://www.hcpc-uk.org/" target="_blank"><img src="Media/HCPC_Registered.jpg"></a>
+                <a href="https://www.psychologists.bc.ca/" target="_blank"><img src="Media/bcpa.png"></a>
+                <a href="https://www.bps.org.uk/" target="_blank"><img src="Media/BPS.jpeg"></a>
+                <a href="https://www.hcpc-uk.org/" target="_blank"><img src="Media/cpbc_alt.jpg"></a>
+            </div>
+            
+        </div>
+    
+    
+
+    
+    <div class="header" id="header">
+        <a href="#"><h1 id="name"><b>Dr. Kevin Miller</b> </h1>
+            <h3 id="r_p">Registered Psychologist</h3></a>
+        
+         
+    </div>
+
+    <div class="navButton" id="navButtonBars" onclick="animation(this); togglemyNav()" onmouseover="change_ham_color()" onmouseout="normalize_ham()">
+            <div class="topbar" id="topbar"></div>
+            <div class="midbar" id="midbar"></div>
+            <div class="botbar" id="botbar"></div>
+        </div>
+    
+  
+
+      <div class="socials" id="socials">
     
        <a id="socialmedia" href="https://www.facebook.com/universityofvictoria/" target="_blank" class="fa fa-facebook"></a>
-       <a id="socialmedia" href="https://twitter.com/uvic" target="_blank" class="fa fa-twitter"></a>
+       <a id="socialmedia" href="https://twitter.com/mbatherapy" target="_blank" class="fa fa-twitter"></a>
        <a id="socialmedia" href="https://www.instagram.com/universityofvictoria/" target="_blank" class="fa fa-instagram"></a>
        <a id="socialmedia" href="https://www.linkedin.com/school/university-of-victoria/" target="_blank" class="fa fa-linkedin"></a>
 
     </div>
     
-    <div class="header" id="header">
-        <h1>Dr. Kevin Miller </h1>
     
-    </div>
-
-    <div class="navButton" id="navButtonBars" onclick="animation(this); togglemyNav()">
-        <div class="topbar"></div>
-        <div class="midbar"></div>
-        <div class="botbar"></div>
-    </div>
-    
-    <div class="page_indicator" id="page_indicator"><em>Book Online</em></div>
-    
-    <div id="myNav" class="overlay">
-  <div class="overlay-content">
-    <a href="index.html">Welcome</a>
-    <a href="services.html">Services</a>
-    <a href="agreement.html">Agreement</a>
-    <a href="contact.html">Contact</a>
-    <a href="fees.html">Fees</a>
-    <a id="currentPage" href="book_an_appointment.html">Book an Appointment</a>
-      <div class="overlaySocials" id="overlaySocials">
+    <!--
+    <div class="overlaySocials" id="overlaySocials">
         <a id="socialmedia" href="https://www.facebook.com/universityofvictoria/" target="_blank" class="fa fa-facebook"></a>
        <a id="socialmedia" href="https://twitter.com/uvic" target="_blank" class="fa fa-twitter"></a>
        <a id="socialmedia" href="https://www.instagram.com/universityofvictoria/" target="_blank" class="fa fa-instagram"></a>
        <a id="socialmedia" href="https://www.linkedin.com/school/university-of-victoria/" target="_blank" class="fa fa-linkedin"></a>
       </div>
-  </div>
-</div>
-    
-<div class="main">
-   
+    -->
 
-   
+    <div class="page_indicator" id="page_indicator">Book an Appointment</div>
     
+     <div id="myNav" class="overlay">
+          <div class="overlay-content">
+            <a href="index.html">Welcome</a>
+            <a href="services.html">Services</a>
+            <a href="agreement.html">Agreement</a>
+            <a href="contact.html">Contact</a>
+            <a href="fees.html">Fees</a>
+            <a id="currentPage" href="book_an_appointment.html">Book an Appointment</a>
 
-
-        
-<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
-    
-    <div class="calendar_header">
-    <h1 id="book_appointment">Book an Appointment</h1>
-    </div>
-    <div class="center_calendar">
-            
-            
-<div class="calendly-inline-widget" data-url="https://calendly.com/mbatherapy/psychotherapy"></div>
-            
-            
-        </div>
-    
-    
-    <br>
-    
- 
-   
-    
+          </div>
     </div>
     
     
+   
     
-    <script>
+
+
+
+    
+    
+    
+
+      <script>
+          
 let prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
+    
+    if(screen.availHeight < screen.availWidth){
+
+    $(".top_picture").css("background-position", "220% " +  (30 -($(this).scrollTop() / 10 )) + "%");
+        
+    };
+    
 let currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-    document.getElementById("header").style.opacity = "1";
-      document.getElementById("header").style.height = "12%";
-      document.getElementById("header").style.fontSize = "22px";
-      document.getElementById("socials").style.opacity = "1";
-      document.getElementById("navButtonBars").style.opacity = "1";
-      document.getElementById("socials").style.height = "12%";
-      document.getElementById("navButtonBars").style.marginTop = "1.2%";
-      document.getElementById("page_indicator").style.marginTop = "1.35%";
+    
+    if(screen.availHeight > screen.availWidth) {
+        if (prevScrollpos > currentScrollPos) {
+          document.getElementById("header").style.borderBottom = "6px solid lightgray";
+            document.getElementById("r_p").style.opacity = "1";
+          document.getElementById("header").style.height = "200px";
+          document.getElementById("navButtonBars").style.top = "65px";
+          document.getElementById("button").style.top = "60px";
+      } else {
+          document.getElementById("header").style.borderBottom = "3px solid lightgray";
+          document.getElementById("r_p").style.opacity = "0";
+          document.getElementById("header").style.height = "150px";
+          document.getElementById("navButtonBars").style.top = "40px";
+          document.getElementById("button").style.top = "33px";
 
+      }
+    }else{
+        if (prevScrollpos > currentScrollPos) {
+          document.getElementById("socials").style.top = "10px";
+          document.getElementById("header").style.borderBottom = "6px solid lightgray";
+          document.getElementById("r_p").style.opacity = "1";
+          document.getElementById("header").style.height = "120px";
+          document.getElementById("page_indicator").style.top = "48px";
+          document.getElementById("navButtonBars").style.top = "42px";
+          document.getElementById("button").style.top = "36px";
+      } else {
+          document.getElementById("socials").style.top = "-8px";
+          document.getElementById("header").style.borderBottom = "3px solid lightgray";
+          document.getElementById("r_p").style.opacity = "0";
+          document.getElementById("header").style.height = "88px";
+          document.getElementById("page_indicator").style.top = "34px";
+          document.getElementById("navButtonBars").style.top = "28px";
+          document.getElementById("button").style.top = "20px";
 
-  } else {
-    document.getElementById("header").style.opacity = "0.98";
-      document.getElementById("header").style.height = "8%";
-      document.getElementById("socials").style.opacity = "0.99";
-      document.getElementById("navButtonBars").style.opacity = "0.99";
-      document.getElementById("socials").style.height = "8%";
-      document.getElementById("header").style.fontSize = "16px";
-      document.getElementById("navButtonBars").style.marginTop = "0.05%";
-      document.getElementById("page_indicator").style.marginTop = "4px";
-
-  }
+    }
+    }
+  
   prevScrollpos = currentScrollPos;
 }
+
+
 </script>
     
 

@@ -30,7 +30,7 @@
 
      
     
- <div id="black"></div>
+ <div id="black" onclick="decreaseNav()"></div>
     
    
 
@@ -45,7 +45,9 @@
     
     
 <div class="main">
-    <div class="top_picture" id="grasssand"></div>
+    <div class="top_picture" id="grasssand">
+    
+   </div>
     
 
     <div class="likes">
@@ -53,11 +55,17 @@
          
        <div class="paragraph_content">
            
-           <img src="Media/DrKevin%20-%20pic%20(1).JPG" id="kevin_introduction">
+          <!-- <img src="Media/DrKevin%20-%20pic%20(1).JPG" id="kevin_introduction">
+           -->
+           
            
         <p id="intro">
-  I am Dr. Kevin Miller. My aim is to help people live a life more fully with a sense of peace and
-joy. I work with youth, adults, couples and groups dealing with a wide range of emotional,
+ 
+             
+            I am Dr. Kevin Miller. My aim is to help people live life more fully with a sense of peace and
+joy.<img src="Media/DrKevin%20-%20pic%20(1).JPG" id="kevin_introduction">
+            
+            I work with youth, adults, couples and groups dealing with a wide range of emotional,
 behavioural, cognitive and social issues. My special interest is working with trauma and its
 effects including emotional dysregulation, addiction, relationship conflict, family dysfunction
 and chronic pain using Mind-Body Attunement Therapy ®.
@@ -66,7 +74,7 @@ and chronic pain using Mind-Body Attunement Therapy ®.
            
         </div>
         
-           <div class="fourthDiv" id="sunocean"></div>
+           <div class="fourthDiv" id="backlit_beach"></div>
 
         <div class="paragraph_content">
         <p>
@@ -81,7 +89,7 @@ and students.
         </p>
         </div>
         
-        <div class="fourthDiv" id="sunocean"></div>
+        <div class="fourthDiv" id="swamp"></div>
     
     
 
@@ -97,7 +105,7 @@ settings.
         </p>
         </div>
         
-        <div class="fourthDiv" id="tree"></div>
+        <div class="fourthDiv" id="footer"></div>
    
                 
         
@@ -125,20 +133,21 @@ Somatic Experiencing Practitioner (SEP) with the SE Trauma Institute Colorado.
 
         <div class="footer">
         
-        <div class="footer_pictures">
-            <a href="https://www.hcpc-uk.org/" target="_blank"><img src="Media/HCPC_Registered.jpg"></a>
-            <a href="https://www.psychologists.bc.ca/" target="_blank"><img src="Media/bcpa.png"></a>
-            <a href="https://www.bps.org.uk/" target="_blank"><img src="Media/BPS.jpeg"></a>
-            <a href="https://www.hcpc-uk.org/" target="_blank"><img src="Media/cpbc_alt.jpg"></a>
+            <div class="footer_pictures">
+                <a href="https://www.hcpc-uk.org/" target="_blank"><img src="Media/HCPC_Registered.jpg"></a>
+                <a href="https://www.psychologists.bc.ca/" target="_blank"><img src="Media/bcpa.png"></a>
+                <a href="https://www.bps.org.uk/" target="_blank"><img src="Media/BPS.jpeg"></a>
+                <a href="https://www.hcpc-uk.org/" target="_blank"><img src="Media/cpbc_alt.jpg"></a>
+            </div>
+            
         </div>
-    </div>
     
     
     </div>
     
     <div class="header" id="header">
-        <a href="#"><h1 id="name"><b>Dr. Kevin Miller</b> </h1></a>
-        <h3 id="r_p">Registered Psychologist</h3>
+        <a href="#"><h1 id="name"><b>Dr. Kevin Miller</b> </h1>
+            <h3 id="r_p">Registered Psychologist</h3></a>
         
          
     </div>
@@ -160,7 +169,7 @@ Somatic Experiencing Practitioner (SEP) with the SE Trauma Institute Colorado.
 
     </div>
     
-    <a href="book_an_appointment.html" class="button" id="button">Book Online</a>
+    <a href="book_an_appointment.html" class="button" id="button">Book an Appointment</a>
     <!--
     <div class="overlaySocials" id="overlaySocials">
         <a id="socialmedia" href="https://www.facebook.com/universityofvictoria/" target="_blank" class="fa fa-facebook"></a>
@@ -199,30 +208,50 @@ Somatic Experiencing Practitioner (SEP) with the SE Trauma Institute Colorado.
 let prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
     
-    
+    if(screen.availHeight < screen.availWidth){
 
     $(".top_picture").css("background-position", "220% " +  (30 -($(this).scrollTop() / 10 )) + "%");
+        
+    };
     
 let currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-      document.getElementById("socials").style.top = "10px";
-      document.getElementById("page_indicator").style.marginTop = "1.65%";
-      document.getElementById("header").style.borderBottom = "6px solid lightgray";
-      document.getElementById("r_p").style.opacity = "1";
-      document.getElementById("header").style.height = "120px";
-      document.getElementById("page_indicator").style.top = "20px";
-      document.getElementById("navButtonBars").style.top = "42px";
-      document.getElementById("button").style.top = "35px";
-  } else {
-      document.getElementById("socials").style.top = "-8px";
-      document.getElementById("header").style.borderBottom = "3px solid lightgray";
-      document.getElementById("r_p").style.opacity = "0";
-      document.getElementById("header").style.height = "88px";
-      document.getElementById("page_indicator").style.top = "6px";
-      document.getElementById("navButtonBars").style.top = "28px";
-      document.getElementById("button").style.top = "20px";
+    
+    if(screen.availHeight > screen.availWidth) {
+        if (prevScrollpos > currentScrollPos) {
+          document.getElementById("header").style.borderBottom = "6px solid lightgray";
+            document.getElementById("r_p").style.opacity = "1";
+          document.getElementById("header").style.height = "200px";
+          document.getElementById("navButtonBars").style.top = "65px";
+          document.getElementById("button").style.top = "60px";
+      } else {
+          document.getElementById("header").style.borderBottom = "3px solid lightgray";
+          document.getElementById("r_p").style.opacity = "0";
+          document.getElementById("header").style.height = "150px";
+          document.getElementById("navButtonBars").style.top = "40px";
+          document.getElementById("button").style.top = "33px";
 
-  }
+      }
+    }else{
+        if (prevScrollpos > currentScrollPos) {
+          document.getElementById("socials").style.top = "10px";
+          document.getElementById("header").style.borderBottom = "6px solid lightgray";
+          document.getElementById("r_p").style.opacity = "1";
+          document.getElementById("header").style.height = "120px";
+          document.getElementById("page_indicator").style.top = "48px";
+          document.getElementById("navButtonBars").style.top = "42px";
+          document.getElementById("button").style.top = "36px";
+      } else {
+          document.getElementById("socials").style.top = "-8px";
+          document.getElementById("header").style.borderBottom = "3px solid lightgray";
+          document.getElementById("r_p").style.opacity = "0";
+          document.getElementById("header").style.height = "88px";
+          document.getElementById("page_indicator").style.top = "34px";
+          document.getElementById("navButtonBars").style.top = "28px";
+          document.getElementById("button").style.top = "20px";
+
+    }
+    }
+  
   prevScrollpos = currentScrollPos;
 }
 
